@@ -1,17 +1,23 @@
-package dev.wfrsilva.cadastrodeNinjas;
+package dev.wfrsilva.cadastrodeNinjas.Ninjas;
 
+import dev.wfrsilva.cadastrodeNinjas.Missoes.MissaoModel;
+import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_cadastro")
+@Table(name = "tb_ninjas")
 public class NinjaModel {
     
     @Id
-    @GenerateValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
     private int idade;
+
+    @ManyToOne
+    @JoinColumn(name= "missoes_id")//chave estrangeira
+    private MissaoModel missoes;
 
     public NinjaModel(){
     }// construtor vazio
