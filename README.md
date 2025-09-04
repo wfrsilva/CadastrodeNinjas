@@ -12,4 +12,6 @@ wendel@Wendel:~/cursosSpring/CadastrodeNinjas$ ```chmod +x mvnw```
 wendel@Wendel:~/cursosSpring/CadastrodeNinjas$ ```./mvnw spring-boot:run```
 
 ## Aula 
-- 04/09/2025 [53:00](https://youtu.be/n8_qrrc8WN4?list=PLUPgTAVftApzKsUkGkPLivAZAfeBMn24h&t=3180)
+- 04/09/2025 [00:53:00](https://youtu.be/n8_qrrc8WN4?t=3180)
+
+- 04/09/2025 [01:10:10](https://youtu.be/n8_qrrc8WN4?t=4210)
