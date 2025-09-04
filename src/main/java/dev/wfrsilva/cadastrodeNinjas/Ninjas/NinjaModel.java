@@ -22,10 +22,11 @@ public class NinjaModel {
     public NinjaModel(){
     }// construtor vazio
 
-    public NinjaModel(String nome, String email, int idade){
+    public NinjaModel(String nome, String email, int idade, MissaoModel missoes){
         this.nome = nome;
         this.email = email;
         this.idade = idade;
+        this.missoes = missoes;
     }// construtor completo
 
 
@@ -41,6 +42,10 @@ public class NinjaModel {
         return this.idade;
     }//getIdade
 
+    public MissaoModel getMissoes(){
+        return this.missoes;
+    }//getMissoes
+
     public void setNome(String nome){
         this.nome = nome;        
     }//setNome
@@ -52,5 +57,9 @@ public class NinjaModel {
     public void setIdade(int idade){
         this.idade = idade;
     }//setIdade
+
+    public void setMissoes(MissaoModel missoes){
+        this.missoes = missoes;
+    }//setMissoes
 
 } //NinjaModel

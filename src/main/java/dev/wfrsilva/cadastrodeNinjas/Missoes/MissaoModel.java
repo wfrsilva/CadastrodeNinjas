@@ -4,9 +4,13 @@ import java.util.List;
 
 import dev.wfrsilva.cadastrodeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_missoes")
+@NoArgsConstructor
+@AllArgsConstructor
 public class MissaoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,15 +21,6 @@ public class MissaoModel {
     @OneToMany(mappedBy="missoes")
     private List<NinjaModel> ninjas;
 
-    public MissaoModel(){
-    }// construtor vazio
-
-    public MissaoModel(String nome, String dificuldade, List<NinjaModel> ninjas){
-        this.nome = nome;
-        this.dificuldade = dificuldade;
-        this.ninjas = ninjas;
-    }//construtor completo
-
     public String getNome(){
         return this.nome;
     }//getNome
@@ -33,6 +28,10 @@ public class MissaoModel {
     public String getDificuldade(){
         return this.dificuldade;
     }//getDificuldade
+
+    public List<NinjaModel> getNinjas(){
+        return this.ninjas;
+    }//getNinjaModels
 
     public void setNome(String nome){
         this.nome = nome;
@@ -42,5 +41,8 @@ public class MissaoModel {
         this.dificuldade = dificuldade;
     }//setDificuldade
 
+    public void setNinjas(List<NinjaModel> ninjas){
+        this.ninjas = ninjas;
+    }//setNinjas
 
 }//MissaoModel
